@@ -13,4 +13,27 @@
 </body>
 </html>
 
-<!-- meta name="viewport" content="width=device-width, initial-scale=1>" -->
+<!-- meta name="viewport" content="width=device-width, initial-scale=1>" -->     <!--THIS HAS TO GO IN THE HEAD TAG, seems to be already included in emmett-->
+
+
+* { margin: 0;}
+
+body { background: rgba(255,0,0, .25); }
+
+    <!--mobile first approach. above this line  is technically the first query. any rules before specifically stated queries (like the two below for 768 px and 1200 px, will apply to the whole layout unless they are overridden. so this first set of rules is for phones and low resolution devices -->
+
+
+@media screen and (min-width: 768px) {
+
+    body { background: rgba(0,255,0,.25); }
+    
+    <!--end of first intentional query-->
+    
+    @media screen and (min-width: 1200px) {
+
+        body { background: rgba(0,0,255,.25); }
+    
+    <!--end of second intentional query-->
+
+
+}
